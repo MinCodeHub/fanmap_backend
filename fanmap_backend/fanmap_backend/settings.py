@@ -20,7 +20,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-db4$o+8(ap(+48*id=zb_h9g118p)i=!tzz+8z9d2phv(eeq#+'
+
+# SECRET_KEY = 'django-insecure-db4$o+8(ap(+48*id=zb_h9g118p)i=!tzz+8z9d2phv(eeq#+'
+
+SECRET_KEY = 'django-insecure-i7ce+ckr5@7#0$dk_ht9njeht3mtu#77m!_5=5k&vzpaogj!o#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'rest_framework',
     'accounts',
     'rest_framework.authtoken',
@@ -46,6 +48,8 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'dj_rest_auth.registration',
+
+     'community',
 ]
 SITE_ID = 1 
 
@@ -65,7 +69,6 @@ REST_FRAMEWORK = {
     'rest_framework.authentication.TokenAuthentication', 
     ],
 }
-
 
 ROOT_URLCONF = 'fanmap_backend.urls'
 
@@ -139,3 +142,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+import os
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
