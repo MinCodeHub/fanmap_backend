@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'dj_rest_auth.registration',
 
-     'community',
+    'community',
+    'place',
 ]
 SITE_ID = 1 
 
